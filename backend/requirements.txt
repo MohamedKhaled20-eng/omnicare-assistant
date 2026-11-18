@@ -1,0 +1,21 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.7,<3.0
+pydantic-settings>=2.3,<3.0
+
+# Agent framework
+langgraph>=0.2.60,<2.0
+langchain-core>=0.3,<2.0
+
+# LLM providers (imported lazily; only the selected LLM_PROVIDER is used at runtime)
+langchain-groq>=0.2,<2.0
+langchain-openai>=0.2,<2.0
+langchain-anthropic>=0.3,<2.0
+langchain-ollama>=0.2,<2.0
+
+# RAG: local persisted vector store + local ONNX embeddings (no PyTorch, no paid API)
+chromadb>=0.5.5,<2.0
+fastembed>=0.3.6,<1.0
+
+# Safe concurrent file writes for the mock claims store
+filelock>=3.13,<4.0
